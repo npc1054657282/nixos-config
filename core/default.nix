@@ -12,4 +12,12 @@
     openssl           # 网络请求相关的基础加密库
     curl              # 很多下载脚本依赖的基础库
   ];
+  # 开启 SSH 服务
+  services.openssh = {
+    enable = true;
+    settings = {
+      # 强烈建议：既然你已经有了 SSH 密钥，为了安全，禁止密码登录
+      PasswordAuthentication = false;
+    };
+  };
 }
