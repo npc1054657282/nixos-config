@@ -15,8 +15,9 @@
   # 开启 SSH 服务
   services.openssh = {
     enable = true;
+    ports = [ 2222 ];
     settings = {
-      # 强烈建议：既然你已经有了 SSH 密钥，为了安全，禁止密码登录
+      PermitRootLogin = "no";
       PasswordAuthentication = false;
     };
   };
