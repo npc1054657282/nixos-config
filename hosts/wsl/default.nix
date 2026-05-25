@@ -25,4 +25,7 @@
   users.defaultUserShell = pkgs.zsh;
   time.timeZone = "Asia/Shanghai";
   system.stateVersion = "25.11";
+  users.users.${username}.openssh.authorizedKeys.keyFiles = [
+    ./authorized_keys
+  ];
 }
