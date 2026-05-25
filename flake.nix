@@ -24,9 +24,8 @@
           nixos-wsl.nixosModules.wsl
           # host目录下的主机配置是必需品。我把git也放进里面了，因为有了它才能够将本机配置与公共配置合并
           ./hosts/wsl
-          # 这些是公共配置，不是主机必须，属于数字生活习惯
-          # ./nixos/nixconfig.nix
-          # ./nixos/font.nix
+          # 公共配置
+          ./core/default.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
